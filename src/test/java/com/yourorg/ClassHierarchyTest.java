@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yourorg;
+package com.aemupgrader;
 
-import com.yourorg.table.ClassHierarchyReport;
+import com.aemupgrader.table.ClassHierarchyReport;
 import org.junit.jupiter.api.Test;
 import org.openrewrite.test.RecipeSpec;
 import org.openrewrite.test.RewriteTest;

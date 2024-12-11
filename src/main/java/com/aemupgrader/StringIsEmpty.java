@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yourorg;
+package com.aemupgrader;
 
 // TODO - This is a placeholder for a Refaster recipe. Implement the recipe by adding before and after annotated methods.
 // The rule should replace calls to `String.length() == 0` with `String.isEmpty()`, as well as similar variants.

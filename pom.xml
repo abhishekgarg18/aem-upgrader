@@ -3,9 +3,9 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.yourorg</groupId>
+    <groupId>com.aemupgrader</groupId>
     <artifactId>rewrite-recipe-starter</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1-abhigarg001-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -75,6 +75,11 @@
             <groupId>org.openrewrite</groupId>
             <artifactId>rewrite-java</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.openrewrite.recipe</groupId>
+            <artifactId>rewrite-java-dependencies</artifactId>
+            <version>1.24.1</version>
+        </dependency>
 
         <dependency>
             <groupId>org.openrewrite</groupId>
@@ -90,6 +95,11 @@
             <groupId>org.openrewrite</groupId>
             <artifactId>rewrite-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openrewrite</groupId>
+            <artifactId>rewrite-maven</artifactId>
         </dependency>
 
         <dependency>
@@ -160,6 +170,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.3.0</version>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>

@@ -17,7 +17,7 @@ plugins {
 }
 
 // Set as appropriate for your organization
-group = "com.yourorg"
+group = "aem.upgrader"
 description = "Rewrite recipes."
 
 dependencies {
@@ -26,6 +26,7 @@ dependencies {
     implementation(platform("org.openrewrite.recipe:rewrite-recipe-bom:latest.release"))
 
     implementation("org.openrewrite:rewrite-java")
+    implementation("org.openrewrite:rewrite-maven")
     implementation("org.openrewrite.recipe:rewrite-java-dependencies")
     implementation("org.openrewrite:rewrite-yaml")
     implementation("org.openrewrite.meta:rewrite-analysis")
