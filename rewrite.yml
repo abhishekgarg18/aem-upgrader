@@ -1,7 +1,61 @@
 ---
 type: specs.openrewrite.org/v1beta/recipe
-name: com.aemupgrader.ApplyRecipeBestPractices
-displayName: Apply Recipe best practices
-description: Apply best practices to your recipes, through OpenRewrite's best practices recipe & IntelliJ IDEA plugin.
+name: com.yourorg.UpgradeDependencyVersionExampleTest
+displayName: Upgrade Maven dependency version example
 recipeList:
   - com.aemupgrader.ConvertFelixToOSGiAnnotations
+  - org.openrewrite.java.migrate.util.SequencedCollection
+  - org.openrewrite.java.migrate.UpgradeToJava21
+  - org.openrewrite.java.ShortenFullyQualifiedTypeReferences
+  - org.openrewrite.maven.UpgradeDependencyVersion:
+      groupId: com.adobe.aem
+      artifactId: aem-sdk-api
+      newVersion: 2024.9.17964.20240924T170544Z-240800
+  - org.openrewrite.maven.ChangePluginConfiguration:
+      groupId: org.apache.maven.plugins
+      artifactId: maven-javadoc-plugin
+      key: configuration/source
+      value: "21"
+
+
+  - org.openrewrite.maven.RemoveManagedDependency:
+      groupId: org.apache.felix
+      artifactId: org.apache.felix.scr.annotations
+
+  - org.openrewrite.maven.UpgradePluginVersion:
+      groupId: "org.objectweb.asm"
+      artifactId: "asm"
+      newVersion: "9.5"
+
+  - org.openrewrite.maven.UpgradePluginVersion:
+      groupId: "org.apache.groovy"
+      artifactId: "groovy-all"
+      newVersion: "4.0.22"
+
+  # Build-time Requirements
+  - org.openrewrite.maven.UpgradePluginVersion:
+      groupId: "biz.aQute.bnd"
+      artifactId: "bnd-maven-plugin"
+      newVersion: "6.4.0"
+
+  - org.openrewrite.maven.UpgradePluginVersion:
+      groupId: "com.adobe.aem"
+      artifactId: "aemanalyser-maven-plugin"
+      newVersion: "1.6.6"
+
+  - org.openrewrite.maven.UpgradePluginVersion:
+      groupId: "org.apache.felix"
+      artifactId: "maven-bundle-plugin"
+      newVersion: "5.1.5"
+
+
+  # Maven SCR Plugin Configuration Update
+  - org.openrewrite.maven.UpgradePluginVersion:
+      groupId: "org.apache.felix"
+      artifactId: "maven-scr-plugin"
+      newVersion: "1.26.4"
+
+
+
+
+
