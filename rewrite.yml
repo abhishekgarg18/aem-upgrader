@@ -1,12 +1,11 @@
 ---
 type: specs.openrewrite.org/v1beta/recipe
-name: com.yourorg.UpgradeDependencyVersionExampleTest
-displayName: Upgrade Maven dependency version example
+name: com.adobe.aem.AEMUprader
+displayName: Upgrade AEM.
 recipeList:
   - com.aemupgrader.ConvertFelixToOSGiAnnotations
   - org.openrewrite.java.migrate.util.SequencedCollection
   - org.openrewrite.java.migrate.UpgradeToJava21
-  - org.openrewrite.java.ShortenFullyQualifiedTypeReferences
   - org.openrewrite.maven.UpgradeDependencyVersion:
       groupId: com.adobe.aem
       artifactId: aem-sdk-api
